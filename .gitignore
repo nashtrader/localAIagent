@@ -23,6 +23,7 @@ Thumbs.db
 src/config/secrets.json
 .env
 n8n-private-workflows
+Data/
 
 # Logs
 logs/
