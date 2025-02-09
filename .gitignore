@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+venv_name/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Secrets and sensitive data
+src/config/secrets.json
+.env
+n8n-private-workflows
+
+# Logs
+logs/
+*.log
+
+# Test outputs
+coverage/
+*.cover
+*.test
+
+# Docker
+docker-compose.override.yml
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Cache and temporary files
+*.bak
+*.swp
+*.tmp
+
+# API keys
+api_keys/
+
+# Node.js (if applicable for some frontend tasks)
+node_modules/
+
+# Database dumps
+*.sql
+*.sqlite
+
+# Generated HTML files
+src/newsletter/templates/weekly_news.html
