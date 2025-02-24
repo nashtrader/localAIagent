@@ -6,6 +6,8 @@ volumes:
   open-webui:
   flowise:
   es_data: # Elasticsearch Speicher
+ 
+
 
 networks:
   demo:
@@ -207,5 +209,7 @@ services:
     networks: ['demo']
     ports:
       - "4000:4000"
+
+
 
     
