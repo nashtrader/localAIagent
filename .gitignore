@@ -9,7 +9,8 @@ env/
 venv/
 venv_name/
 venv
-
+supabase/
+supabase
 # Editor directories and files
 .vscode/
 .idea/
