@@ -52,7 +52,7 @@ mit einer umfassenden API
 
 ```
 git clone https://github.com/nashtrader/localAIagent.git
-cd local-ai-packaged
+cd localAIagent
 docker compose --profile gpu-nvidia up
 ```
 
@@ -74,7 +74,7 @@ für Installationsanweisungen und starte das Starter Kit folgendermaßen:
 
 ```
 git clone https://github.com/nashtrader/localAIagent.git
-cd local-ai-packaged
+cd localAIagent
 docker compose up
 ```
 
@@ -85,7 +85,7 @@ indem du `http://host.docker.internal:11434/` als Host verwendest.
 
 ```
 git clone https://github.com/nashtrader/localAIagent.git
-cd local-ai-packaged
+cd localAIagent
 docker compose --profile cpu up
 ```
 
