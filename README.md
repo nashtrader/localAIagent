@@ -1,3 +1,11 @@
+# WICHTIG
+
+Wenn ihr Teil des Neurawork LernProgrammes seit, gibt es im Memberspot zusätzliche Videos zum einrichten. 
+Alles unter dem: 
+Local AI Agent
+Section 1: Grundlagen & Workspaceeinrichtung
+Modul 2: Installationsanleitungen mit Docker
+
 # Self-hosted AI Starter Kit (vom n8n-Team), modifiziert von Felix
 
 **Self-hosted AI Starter Kit** ist ein offenes, Docker Compose Template, das
