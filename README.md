@@ -53,6 +53,12 @@ mit einer umfassenden API
 ```
 git clone https://github.com/nashtrader/localAIagent.git
 cd localAIagent
+```
+
+**SUPER WICHTIG**: Nun musst du die .env.example Datei in .env umbenennen ansonsten wird es nicht funktionieren! Falls du das schon ohne Umbenennen ausgeführt hast, dann musst du Docker Volumes löschen, da sonst die Konfiguration nicht übernommen wird.
+
+Dann starte den Docker Container mit GPU Unterstützung:
+```
 docker compose --profile gpu-nvidia up
 ```
 
@@ -68,6 +74,8 @@ leider nicht für die Docker-Instanz freigeben. Es gibt zwei Möglichkeiten:
 1. Das Starter Kit vollständig auf der CPU ausführen (siehe "Für alle anderen" unten)
 2. Ollama auf deinem Mac ausführen für schnellere Inferenz und sich mit n8n verbinden
 
+Es hat sich gezeigt, das es auf Macs sinnvoller ist, Ollama ohne Docker zu verwenden. Da die Docker Container bei Macs nicht auf die GPU zugreifen können, ist die Inferenzgeschwindigkeit auf der CPU sehr langsam.
+
 Falls du Ollama auf deinem Mac nutzen möchtest, besuche die
 [Ollama Homepage](https://ollama.com/)
 für Installationsanweisungen und starte das Starter Kit folgendermaßen:
@@ -75,6 +83,12 @@ für Installationsanweisungen und starte das Starter Kit folgendermaßen:
 ```
 git clone https://github.com/nashtrader/localAIagent.git
 cd localAIagent
+```
+
+**SUPER WICHTIG**: Nun musst du die .env.example Datei in .env umbenennen ansonsten wird es nicht funktionieren! Falls du das schon ohne Umbenennen ausgeführt hast, dann musst du Docker Volumes löschen, da sonst die Konfiguration nicht übernommen wird.
+
+Dann starte den Docker Container ohne GPU Unterstützung:
+```
 docker compose up
 ```
 
@@ -86,6 +100,11 @@ indem du `http://host.docker.internal:11434/` als Host verwendest.
 ```
 git clone https://github.com/nashtrader/localAIagent.git
 cd localAIagent
+```
+**SUPER WICHTIG**: Nun musst du die .env.example Datei in .env umbenennen ansonsten wird es nicht funktionieren! Falls du das schon ohne Umbenennen ausgeführt hast, dann musst du Docker Volumes löschen, da sonst die Konfiguration nicht übernommen wird.
+
+Dann starte den Docker Container ohne GPU Unterstützung:
+```
 docker compose --profile cpu up
 ```
 
