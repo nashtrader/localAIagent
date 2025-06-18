@@ -46,10 +46,6 @@ mit einer umfassenden API
 
 ✅ [**PostgreSQL**](https://www.postgresql.org/) - Arbeitspferd der Data Engineering-Welt, das große Datenmengen sicher verarbeitet
 
-✅ [**Elasticsearch**](https://www.elastic.co/de/elasticsearch) - Dokumenten-/Vektorspeicher
-
-✅ [**Kibana**](https://www.elastic.co/de/kibana) - Dashboard für Elasticsearch
-
 ✅ [**Crawl4ai**](https://docs.crawl4ai.com/) - Crawler Container
 
 ✅ [**markitdown**](https://github.com/microsoft/markitdown) - File Extractor Container (PDF, OCR, usw.)

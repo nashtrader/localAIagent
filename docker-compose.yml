@@ -4,9 +4,7 @@ volumes:
   ollama_storage:
   qdrant_storage:
   open-webui:
-  flowise:
-  es_data: # Elasticsearch Speicher
- 
+  flowise: 
 
 
 networks:
@@ -34,6 +32,11 @@ x-ollama: &service-ollama
   restart: unless-stopped
   ports:
     - 11434:11434
+  environment:
+    - OLLAMA_CONTEXT_LENGTH=16000
+    - OLLAMA_FLASH_ATTENTION=1
+    - OLLAMA_KV_CACHE_TYPE=q8_0
+    - OLLAMA_MAX_LOADED_MODELS=2
   volumes:
     - ollama_storage:/root/.ollama
 
@@ -160,36 +163,6 @@ services:
     depends_on:
       - ollama-gpu
 
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.10.1
-    container_name: elasticsearch
-    networks: ['demo'] # Gleiche Netzwerkzuweisung
-    environment:
-      - discovery.type=single-node
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms1g -Xmx1g" # Speicherzuweisung
-      - xpack.security.enabled=false
-      - xpack.security.http.ssl.enabled=false
-      - "path.repo=/usr/share/elasticsearch/snapshots"
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    ports:
-      - "9200:9200"
-      - "9300:9300" # Für die interne Kommunikation
-    volumes:
-      - es_data:/usr/share/elasticsearch/data
-      - /home/felix/projects/elasticsearch/snapshots:/usr/share/elasticsearch/snapshots  # Host-Ordner für Snapshots mounten
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:8.10.1
-    container_name: kibana
-    networks: ['demo'] # Gleiche Netzwerkzuweisung
-    ports:
-      - "5601:5601" # Kibana-Weboberfläche
-    environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
 
   crawl4ai:
     image: unclecode/crawl4ai:all-amd64
